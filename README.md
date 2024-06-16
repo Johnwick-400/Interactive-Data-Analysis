@@ -54,7 +54,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Set the Seaborn style and color palette for all plots
+
 sns.set(style="whitegrid")
 sns.set_palette("Set2")
 
@@ -70,27 +70,25 @@ def load_data(uploaded_file):
 
 def clean_data(df):
     df = df.drop_duplicates()
-    df = df.dropna()  # Use more sophisticated methods as needed
-    # Additional cleaning steps can be added here
+    df = df.dropna() 
     return df
 
 def analyze_data(df):
-    numeric_df = df.select_dtypes(include=['float64', 'int64'])  # Select only numeric columns
+    numeric_df = df.select_dtypes(include=['float64', 'int64'])  
     description = numeric_df.describe()
-    correlation = numeric_df.corr()
-    # Additional analysis steps can be added here
+    correlation = numeric_df.corr()  
+    
     return {"description": description, "correlation": correlation}
 
 def visualize_data(df):
     numeric_df = df.select_dtypes(include=['float64', 'int64'])  # Select only numeric columns
     
-    # Correlation Heatmap
     plt.figure(figsize=(10, 6))
     sns.heatmap(numeric_df.corr(), annot=True, cmap='coolwarm', linewidths=0.5, linecolor='black')
     plt.title('Correlation Matrix', fontsize=16)
     st.pyplot(plt)
     
-    # Histograms
+   
     st.write("### Histograms")
     for column in numeric_df.columns:
         plt.figure(figsize=(10, 6))
@@ -100,7 +98,7 @@ def visualize_data(df):
         plt.ylabel('Frequency', fontsize=12)
         st.pyplot(plt)
     
-    # Box Plots
+    
     st.write("### Box Plots")
     for column in numeric_df.columns:
         plt.figure(figsize=(10, 6))
@@ -109,7 +107,6 @@ def visualize_data(df):
         plt.xlabel(column, fontsize=12)
         st.pyplot(plt)
     
-    # Pairwise Scatter Plots
     st.write("### Pairwise Scatter Plots")
     if len(numeric_df.columns) > 1:
         sns.pairplot(numeric_df, diag_kind='kde', plot_kws={'alpha': 0.7, 's': 80, 'edgecolor': 'k'}, palette='Set2')
@@ -117,7 +114,7 @@ def visualize_data(df):
         st.pyplot(plt)
 
 def main():
-    st.title("Interactive Data Analysis")
+    st.title("Interactive  Data Analysis")
     
     uploaded_file = st.file_uploader("Upload your dataset", type=["csv", "xlsx", "json"])
     if uploaded_file is not None:
