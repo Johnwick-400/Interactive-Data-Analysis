@@ -1,6 +1,6 @@
 # Interactive Data Analysis
 
-An AI-powered data analysis tool that automates the process of data extraction, cleaning, analysis, and visualization. This tool is built using Python and Streamlit, providing an intuitive web interface for users to upload datasets and receive comprehensive analysis and visualizations.
+An analysis tool that automates the process of data extraction, cleaning, analysis, and visualization. This tool is built using Python and Streamlit, providing an intuitive web interface for users to upload datasets and receive comprehensive analysis and visualizations.
 
 ## Features
 
@@ -13,7 +13,7 @@ An AI-powered data analysis tool that automates the process of data extraction, 
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/yourusername/interactive-data-analysis.git
+    git clone https://github.com/Johnwick-400/Interactive-Data-Analysis
     cd interactive-data-analysis
     ```
 
