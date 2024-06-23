@@ -20,18 +20,7 @@ An analysis tool that automates the process of data extraction, cleaning, analys
 2. **Install the required libraries**:
     ```sh
     pip install -r requirements.txt
-    ```
-
-    **`requirements.txt`**:
-    ```text
-    pandas
-    numpy
-    matplotlib
-    seaborn
-    streamlit
-    ```
-
-## Usage
+   ## Usage
 
 1. **Run the Streamlit application**:
     ```sh
